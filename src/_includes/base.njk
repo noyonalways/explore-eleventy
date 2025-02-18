@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/global.css" />
+  <title>{{ title }}</title>
+</head>
+
+<body class="bg-background text-text">
+  {% include 'shared/header.njk' %}
+  <main>
+    {{ content | safe }}
+  </main>
+  {% include 'shared/footer.njk' %}
+</body>
+
+</html>
