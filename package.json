@@ -7,13 +7,14 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "css": "tailwindcss -i ./src/_includes/css/global.css -o global.out.css --watch"
+    "css": "tailwindcss -i ./src/css/global.css -o global.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.2",
     "tailwindcss": "3"

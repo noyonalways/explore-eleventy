@@ -3,9 +3,7 @@ export default async function (eleventyConfig) {
     return new Date().getFullYear();
   });
 
-  eleventyConfig.addPassthroughCopy({
-    "global.out.css": "css/global.css",
-  });
+  eleventyConfig.addPassthroughCopy("global.css");
   return {
     dir: {
       input: "src",

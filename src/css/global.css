@@ -17,3 +17,9 @@
   --tw-color-background: #0c1221;
   --tw-color-text: #fff;
 }
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+  }
+}

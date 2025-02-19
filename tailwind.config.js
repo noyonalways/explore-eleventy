@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,md,njk,ejs,pug}"],
-  darkMode: "media",
+  darkMode: "class",
   theme: {
     container: {
       center: true,
@@ -25,5 +25,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
