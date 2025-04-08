@@ -4,6 +4,7 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("global.css");
+  eleventyConfig.addPassthroughCopy({public: "/"});
   return {
     dir: {
       input: "src",

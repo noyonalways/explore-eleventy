@@ -1,46 +1,36 @@
 <!-- Start of Selection -->
-<header class="sticky top-0 z-50 bg-background">
+<header class="sticky top-0 z-50 bg-background lg:bg-white/50 dark:lg:bg-[#0c1221]/50 py-5 lg:py-8 lg:backdrop-blur" >
   <div class="container">
-    <div class="flex justify-between items-center h-16">
+    <div class="flex justify-between items-center ">
       <!-- Logo -->
       <div class="flex-shrink-0">
         <h1 class="text-2xl font-bold text-primary">
-          BlogSpace
+          <a href="/" class="">BlogSpace
+          </a>
         </h1>
       </div>
 
       <!-- Navigation -->
-      <nav id="navbar"
-        class="absolute top-14 left-0 w-full lg:w-auto bg-background lg:static lg:flex flex-col lg:flex-row hidden">
-        <ul class="flex flex-col lg:flex-row lg:gap-x-6 gap-y-2">
+      <nav id="navbar" class="absolute top-14 left-0 w-full lg:w-auto   bg-background lg:bg-transparent lg:static lg:flex flex-col lg:flex-row hidden">  
+        <ul class="flex flex-col lg:flex-row lg:gap-x-8 gap-y-2">
           <li>
-            <a href="/"
-              class="hover:bg-primary block lg:inline-block hover:text-white lg:hover:bg-transparent lg:hover:text-primary px-4 lg:px-0 py-2 lg:py-0">Home</a>
+            <a href="/" class="hover:bg-primary block lg:inline-block hover:text-white lg:hover:bg-transparent lg:hover:text-primary px-4 lg:px-0 py-2 lg:py-0">Home</a>
           </li>
           <li>
-            <a href="/blogs"
-              class="hover:bg-primary block lg:inline-block hover:text-white lg:hover:bg-transparent lg:hover:text-primary px-4 lg:px-0 py-2 lg:py-0">Blogs</a>
+            <a href="/blogs" class="hover:bg-primary block lg:inline-block hover:text-white lg:hover:bg-transparent lg:hover:text-primary px-4 lg:px-0 py-2 lg:py-0">Blogs</a>
           </li>
           <li>
-            <a href="/categories/"
-              class="hover:bg-primary block lg:inline-block hover:text-white lg:hover:bg-transparent lg:hover:text-primary px-4 lg:px-0 py-2 lg:py-0">Categories</a>
+            <a href="/about" class="hover:bg-primary block lg:inline-block hover:text-white lg:hover:bg-transparent lg:hover:text-primary px-4 lg:px-0 py-2 lg:py-0">About</a>
           </li>
-          <li>
-            <a href="#"
-              class="hover:bg-primary block lg:inline-block hover:text-white lg:hover:bg-transparent lg:hover:text-primary px-4 lg:px-0 py-2 lg:py-0">About</a>
-          </li>
-          </>
+        </ul>
       </nav>
 
       <!-- Dark/Light Mode Toggle Button -->
       <div class="flex gap-3 items-center">
         <div>
           <button id="theme-toggle" class="dark:text-white focus:outline-none">
-            <svg id="theme-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path id="sun" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 2v2m0 16v2m10-10h-2M4 12H2m16.24 8.24l-1.42-1.42M5.76 5.76l-1.42 1.42M18.36 5.64l-1.42 1.42M5.64 18.36l-1.42-1.42">
-              </path>
+            <svg id="theme-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path id="sun" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m0 16v2m10-10h-2M4 12H2m16.24 8.24l-1.42-1.42M5.76 5.76l-1.42 1.42M18.36 5.64l-1.42 1.42M5.64 18.36l-1.42-1.42"></path>
             </svg>
           </button>
         </div>
@@ -48,9 +38,8 @@
         <!-- Mobile Menu Button -->
         <div class="flex lg:hidden">
           <button id="mobile-menu-button" class="text-text focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
             </svg>
           </button>
         </div>
@@ -77,20 +66,34 @@
 </svg>
 `
 
-
-  document.body.classList.toggle('dark', currentTheme === 'dark');
-  themeIcon.innerHTML = currentTheme === 'dark' ? moonIcon : sunIcon;
+  document
+    .body
+    .classList
+    .toggle('dark', currentTheme === 'dark');
+  themeIcon.innerHTML = currentTheme === 'dark'
+    ? moonIcon
+    : sunIcon;
 
   // Toggle theme
   themeToggle.addEventListener('click', () => {
-    const isDark = document.body.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    const isDark = document
+      .body
+      .classList
+      .toggle('dark');
+    localStorage.setItem(
+      'theme', isDark
+      ? 'dark'
+      : 'light');
 
-
-    themeIcon.innerHTML = isDark ? moonIcon : sunIcon;
+    themeIcon.innerHTML = isDark
+      ? moonIcon
+      : sunIcon;
   });
 
   mobileMenuButton.addEventListener('click', () => {
-    navbar.classList.toggle('hidden');
+    navbar
+      .classList
+      .toggle('hidden');
   });
-</script><!-- End of Selection -->
+</script>
+<!-- End of Selection -->

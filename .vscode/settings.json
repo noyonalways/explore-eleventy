@@ -1,3 +1,13 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.defaultFormatter": "douglaszaltron.nunjucks-vscode-extensionpack",
+  "cSpell.words": [
+    "endfor",
+    "Noyon",
+    "Rahman"
+  ],
+  "[njk]": {
+    "editor.defaultFormatter": "douglaszaltron.nunjucks-vscode-extensionpack"
+  }
 }
